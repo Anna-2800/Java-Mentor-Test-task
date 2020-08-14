@@ -24,6 +24,6 @@ public class NumRome {
     }
 
     public static String romanNum (int num){
-        return rome[num-1]; //(?)
+        return rome[num-1]; //возвращаем римскую цифру на основании индекса массива 
     }
 }
