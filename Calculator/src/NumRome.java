@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class NumRome {
 
     public static
-    String[] rome = {
+    String[] rome = { // создаем массив римских цифр
             "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", //10
             "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII","XVIII", "XIX", "XX",//20
             "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII","XXVIII", "XXIX", "XXX",//30
@@ -19,11 +19,11 @@ public class NumRome {
     };
 
     public static int arabicNum (Scanner scan) {
-        String romanNum =scan.next();
-        return Arrays.asList(rome).indexOf(romanNum)+1;
+        String romanNum =scan.next(); //сканируем введенные римские цифры 
+        return Arrays.asList(rome).indexOf(romanNum)+1; //возвращаем индекс объекта массива увеличенный на 1
     }
 
     public static String romanNum (int num){
-        return rome[num-1];
+        return rome[num-1]; //(?)
     }
 }
