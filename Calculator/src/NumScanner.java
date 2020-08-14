@@ -4,7 +4,7 @@ public class NumScanner {
 
     public static int num (Scanner scan) {
         int num=0;
-        if (scan.hasNextInt()) { //сканируем введеные числа
+        if (scan.hasNextInt()) { //проверяем введенное значение 
             num = scan.nextInt();
         } else {
             System.out.print("Ошибка. Введен неверный символ. ");
