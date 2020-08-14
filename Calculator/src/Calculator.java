@@ -7,12 +7,11 @@ public class Calculator {
         Scanner scan = new Scanner(System.in);
         
         if (scan.hasNextInt()) { //если введены арабские цифры
-            int num1 = NumScanner.num(scan);
+            int num1 = NumScanner.num(scan); //вызываем метод класса NumScanner 
             char operation = OperationScanner.operation(scan);
             int num2 = NumScanner.num(scan);
-            int result = calculate(num1, num2, operation);
-            if (result == 101) { //проверка результата (?)
-            } else {
+            int result = calculate(num1, num2, operation); //производим вычисление
+            if (result != 101) { //проверка результата
                 System.out.println("Результат " + result);
             }
         }
@@ -22,14 +21,14 @@ public class Calculator {
             char operation = OperationScanner.operation(scan);
             int num2 = NumRome.arabicNum(scan);
             int result = Calculator.calculate(num1, num2, operation);
-            if (result==101) { //(?)
-            } else {System.out.println("Результат " + NumRome.romanNum(result));
+            if (result!=101) { 
+            System.out.println("Результат " + NumRome.romanNum(result));
             }
     }
     }
     
     public static int calculate(int num1, int num2, char operation){ //проведение арифметической операции
-        int result=101; //(?)
+        int result=101; //присваиваем переменной значение, которое невозможно получить, для того, чтобы понять была ли ошибка
         if (num1>=1 & num1<=10 & num2>=1 & num2<=10){ //диапазон допустимых значений введенных чисел
             switch (operation) {
                 case '+':
